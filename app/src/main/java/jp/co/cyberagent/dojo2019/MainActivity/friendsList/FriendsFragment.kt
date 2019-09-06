@@ -1,4 +1,4 @@
-package jp.co.cyberagent.dojo2019.MainActivity
+package jp.co.cyberagent.dojo2019.MainActivity.friendsList
 
 import android.app.Activity.RESULT_CANCELED
 import android.app.Activity.RESULT_OK
@@ -9,17 +9,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.yuyakaido.android.cardstackview.CardStackLayoutManager
-import com.yuyakaido.android.cardstackview.CardStackView
 import jp.co.cyberagent.dojo2019.R
-import jp.co.cyberagent.dojo2019.db.User
-import jp.co.cyberagent.dojo2019.UserViewModel
+import jp.co.cyberagent.dojo2019.data.db.User
+import jp.co.cyberagent.dojo2019.data.repository.UserViewModel
 import kotlinx.android.synthetic.main.fragment_friends.*
 import kotlinx.coroutines.*
 
@@ -71,33 +68,19 @@ class FriendsFragment : Fragment() , CoroutineScope by MainScope(){
 
         val mRecyclerView = view.findViewById<RecyclerView>(R.id.recycler_view)
         val itemDecoration = DividerItemDecoration(context, DividerItemDecoration.VERTICAL)
-        val mAdapter = FriendsViewAdapter(view.context)
+        val mAdapter =
+            FriendsViewAdapter(view.context)
         mRecyclerView.apply{
             //addItemDecoration(itemDecoration)
             layoutManager = LinearLayoutManager(activity?.applicationContext)
             adapter = mAdapter
         }
 
-
         userViewModel.allUser.observe(this, Observer { user ->
             user?.let {
                 mAdapter.setUsers(it)
             }
         })
-
-        //val delete = view.findViewById<TextView>(R.id.nameItem)
-        //delete?.setOnClickListener {
-        //    launch (Dispatchers.Main){
-        //       val items = async (context = Dispatchers.IO){
-        //           val name = delete?.text.toString()
-        //           mAdapter.removeItem(1)
-
-        //           AppDatabase.getInstance()?.userDao()?.let {
-
-        //           }
-        //       }
-        //    }
-        //}
 
         val a = activity!!.intent.data
         val uri = Uri.parse(a.toString())

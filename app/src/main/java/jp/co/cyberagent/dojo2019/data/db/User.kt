@@ -1,9 +1,10 @@
-package jp.co.cyberagent.dojo2019.db
+package jp.co.cyberagent.dojo2019.data.db
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+//dbの情報
 @Entity( primaryKeys = ["name","twitter","github"])
 data class User(
     //@PrimaryKey(autoGenerate = true) var uid: Int = 0,

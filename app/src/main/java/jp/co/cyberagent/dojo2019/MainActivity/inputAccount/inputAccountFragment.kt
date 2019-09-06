@@ -1,4 +1,4 @@
-package jp.co.cyberagent.dojo2019.MainActivity
+package jp.co.cyberagent.dojo2019.MainActivity.inputAccount
 
 import android.app.AlertDialog
 import android.content.Context
@@ -13,11 +13,9 @@ import android.widget.Button
 import android.widget.EditText
 import com.google.zxing.BarcodeFormat
 import android.widget.ImageView
-import androidx.core.graphics.drawable.toIcon
 import com.journeyapps.barcodescanner.BarcodeEncoder
 import jp.co.cyberagent.dojo2019.R
 import kotlinx.android.synthetic.main.fragment_input_account.*
-import kotlinx.android.synthetic.main.item_repo.*
 
 
 // TODO: Rename parameter arguments, choose names that match

@@ -35,15 +35,17 @@
                     android:layout_marginTop="8dp" android:paddingTop="64dp"/>
 
             <TextView
-                    android:textColor="@color/white"
+                    android:id="@+id/twitterItem"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/twitterItem"
-                    app:layout_constraintStart_toStartOf="@+id/twittericon"
-                    tools:text="zoothezoo_pro"
-                    app:layout_constraintEnd_toEndOf="@+id/twittericon"
-                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="16dp"
-                    android:textSize="18sp" app:layout_constraintTop_toTopOf="@+id/twittericon"
-                    android:paddingTop="64dp"/>
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:paddingTop="64dp"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/githubicon"
+                    app:layout_constraintTop_toTopOf="@+id/twittericon"
+                    tools:text="zoothezoo_pro" />
             <TextView
                     android:textColor="@color/white"
                     android:text="textview"
@@ -55,14 +57,17 @@
                     app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="16dp"
                     app:layout_constraintTop_toTopOf="parent" android:layout_marginEnd="8dp"
                     app:layout_constraintEnd_toEndOf="parent"/>
+
             <ImageView
-                    android:layout_width="66dp"
-                    android:layout_height="69dp" app:srcCompat="@drawable/twitter"
                     android:id="@+id/twittericon"
-                    android:layout_marginTop="16dp"
+                    android:layout_width="66dp"
+                    android:layout_height="69dp"
+                    android:layout_marginTop="36dp"
+                    app:layout_constraintEnd_toEndOf="@+id/twitterItem"
+                    app:layout_constraintStart_toStartOf="@+id/twitterItem"
                     app:layout_constraintTop_toBottomOf="@+id/nameItem"
-                    app:layout_constraintEnd_toStartOf="@+id/guideline" android:layout_marginEnd="8dp"
-                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"/>
+                    app:srcCompat="@drawable/twitter" />
+
             <ImageView
                     android:layout_width="70dp"
                     android:layout_height="71dp" app:srcCompat="@drawable/github1"
@@ -75,6 +80,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/guideline" app:layout_constraintGuide_percent="0.5"/>
+
+            <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/twitterItem"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nameItem"
+                    tools:srcCompat="@tools:sample/avatars" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

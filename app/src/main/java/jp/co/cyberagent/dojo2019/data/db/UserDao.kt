@@ -1,8 +1,9 @@
-package jp.co.cyberagent.dojo2019.db
+package jp.co.cyberagent.dojo2019.data.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
 
+//SQL文をいい感じに使える
 @Dao
 interface UserDao {
     @Query("SELECT * FROM user")

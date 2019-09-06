@@ -1,18 +1,19 @@
-package jp.co.cyberagent.dojo2019
+package jp.co.cyberagent.dojo2019.data.repository
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 
-import jp.co.cyberagent.dojo2019.db.AppDatabase
-import jp.co.cyberagent.dojo2019.db.User
+import jp.co.cyberagent.dojo2019.data.db.AppDatabase
+import jp.co.cyberagent.dojo2019.data.db.User
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 
-class UserViewModel (application: Application):
-    AndroidViewModel(application){
+class UserViewModel (
+    application: Application
+): AndroidViewModel(application){
 
     private val repository: UserRepository
     val allUser: LiveData<List<User>>

@@ -1,11 +1,11 @@
-package jp.co.cyberagent.dojo2019.db
+package jp.co.cyberagent.dojo2019.data.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import jp.co.cyberagent.dojo2019.App
 
+//dbの生成
 @Database(entities = [User::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun userDao(): UserDao
@@ -21,7 +21,7 @@ abstract class AppDatabase : RoomDatabase() {
         }
 
         private var instance: AppDatabase? = null
-        fun getInstance():AppDatabase {
+        fun getInstance(): AppDatabase {
                 return instance!!
         }
 
