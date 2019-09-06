@@ -7,9 +7,13 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
 import android.content.Intent
+import androidx.lifecycle.ViewModelProviders
+import com.squareup.picasso.Picasso
 import jp.co.cyberagent.dojo2019.R
 import jp.co.cyberagent.dojo2019.WebActivity.WebActivity
 import jp.co.cyberagent.dojo2019.data.db.User
+import jp.co.cyberagent.dojo2019.data.network.Repository
+import kotlinx.android.synthetic.main.item_repo.view.*
 
 
 //友人一覧用のrecyclerviewのadapter
@@ -18,6 +22,8 @@ class FriendsViewAdapter(
     val context: Context
 ): RecyclerView.Adapter<FriendsViewAdapter.RecyclerViewHolder>(){
     private val itemList = mutableListOf<User>()
+
+    public lateinit var friendsViewModel: FriendsViewModel
 
     //User情報をitemListに入れます
     fun setUsers(userList: List<User>){
@@ -44,6 +50,9 @@ class FriendsViewAdapter(
 
         val context = this.context
 
+
+        Picasso.get().load(FriendsViewModel().fetchRepositoryList(item.github)).into(holder.itemView.imageView)
+
         holder.twitter.setOnClickListener {
             //Toast.makeText(context,item.twitter,Toast.LENGTH_SHORT).show()
             gotwi(item)
@@ -52,6 +61,9 @@ class FriendsViewAdapter(
             //Toast.makeText(context,item.github,Toast.LENGTH_SHORT).show()
             gogit(item)
         }
+
+
+
     }
 
     fun gotwi(item: User){

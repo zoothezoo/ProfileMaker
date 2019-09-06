@@ -93,12 +93,8 @@ class FriendsFragment : Fragment() , CoroutineScope by MainScope(){
             twitter = TWI ?: "none",
             github = GIT ?: "none"
         )
+
         userViewModel.insert(user)
-
-
-
-
-
 
         addbutton.setOnClickListener{
             try {
@@ -131,15 +127,7 @@ class FriendsFragment : Fragment() , CoroutineScope by MainScope(){
                     github = GIT ?: "none"
                 )
 
-
                 userViewModel.insert(user)
-
-
-                //launch(Dispatchers.IO){
-                //    async {
-                //        AppDatabase.getInstance()?.userDao()?.insert(user)
-                //    }.await()
-                //}
             }
             if (resultCode == RESULT_CANCELED) {
                 //handle cancel
@@ -147,14 +135,6 @@ class FriendsFragment : Fragment() , CoroutineScope by MainScope(){
         }
     }
 
-    //fun createDataset() : List<String>{
-    //    val dataset : MutableList<String> = mutableListOf()
-
-    //    repeat(10){
-    //        dataset.add("yeeey")
-    //    }
-    //    return dataset
-    //}
 
 //    // TODO: Rename method, update argument and hook method into UI event
 //    fun onButtonPressed(uri: Uri) {
