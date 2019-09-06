@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+
+    <color name="secondColorPrimary">#2196f3</color>
+    <color name="secondColorPrimaryDark">#0069c0</color>
+    <color name="secondColorPrimaryLight">#6ec6ff</color>
+
+    <color name="colorText">#000000</color>
+
+
+    <color name="colorAccent">#ec407a</color>
+
+    <color name="colorBackground">#eceff1</color>
+
+
+    <color name="tabmoji">#000000</color>
+
+
+    <!-- Grayscale -->
+    <color name="white"     >#FFFFFF</color>
+    <color name="gray_light">#DFDFDF</color>
+    <color name="gray"      >#939393</color>
+    <color name="gray_dark" >#5F5F5F</color>
+    <color name="black"     >#303030</color>
+</resources>

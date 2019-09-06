@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="jp.co.cyberagent.dojo2019">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+            android:name=".App"
+            android:allowBackup="true"
+            android:hardwareAccelerated="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/DarkThemeApp">
+            <!--android:theme="@style/Theme.AppCompat.Light.NoActionBar"-->
+
+        <activity android:name=".WebActivity.WebActivity"
+                  android:configChanges="uiMode">
+        </activity>
+        <activity android:name=".MainActivity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="ca-tech" android:host="dojo" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
+
+        <!-- android:theme="@style/AppTheme"> -->

@@ -1,0 +1,29 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="DarkThemeApp"
+           parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/secondColorPrimaryDark</item>
+        <item name="colorControlNormal">@color/secondColorPrimary</item>
+        <item name="android:textColorHint">@color/secondColorPrimary</item>
+    </style>
+
+    <style name="EditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="android:textColorHint">@color/gray_dark</item>
+    </style>
+
+    <style name="title">
+        <item name="android:background">@color/secondColorPrimary</item>
+    </style>
+
+
+    <style name="button">
+        <item name="android:backgroundTint">@color/secondColorPrimaryLight</item>
+    </style>
+
+
+</resources>
