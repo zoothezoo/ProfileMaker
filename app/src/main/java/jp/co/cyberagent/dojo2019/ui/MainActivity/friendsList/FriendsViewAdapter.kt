@@ -1,4 +1,4 @@
-package jp.co.cyberagent.dojo2019.MainActivity.friendsList
+package jp.co.cyberagent.dojo2019.ui.MainActivity.friendsList
 
 import android.content.Context
 import android.view.View
@@ -7,12 +7,12 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
 import android.content.Intent
+import android.widget.ImageView
 import androidx.lifecycle.ViewModelProviders
 import com.squareup.picasso.Picasso
 import jp.co.cyberagent.dojo2019.R
-import jp.co.cyberagent.dojo2019.WebActivity.WebActivity
+import jp.co.cyberagent.dojo2019.ui.WebActivity.WebActivity
 import jp.co.cyberagent.dojo2019.data.db.User
-import jp.co.cyberagent.dojo2019.data.network.Repository
 import kotlinx.android.synthetic.main.item_repo.view.*
 
 
@@ -38,9 +38,7 @@ class FriendsViewAdapter(
         notifyItemRemoved(position)
     }
 
-    override fun getItemCount(): Int {
-        return itemList.size
-    }
+    override fun getItemCount(): Int = itemList.size
 
     override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
         val item = itemList[position]
@@ -50,8 +48,12 @@ class FriendsViewAdapter(
 
         val context = this.context
 
+        val fragment = FriendsFragment()
+//        friendsViewModel = ViewModelProviders.of(fragment).get(FriendsViewModel::class.java)
 
-        Picasso.get().load(FriendsViewModel().fetchRepositoryList(item.github)).into(holder.itemView.imageView)
+       // val str = friendsViewModel.fetchRepositoryList(item.github)
+
+        //Picasso.get().load(str).into(holder.image)
 
         holder.twitter.setOnClickListener {
             //Toast.makeText(context,item.twitter,Toast.LENGTH_SHORT).show()
@@ -92,6 +94,7 @@ class FriendsViewAdapter(
         val name = view.findViewById<TextView>(R.id.nameItem)
         val twitter = view.findViewById<TextView>(R.id.twitterItem)
         val github = view.findViewById<TextView>(R.id.githubItem)
+        val image = view.findViewById<ImageView>(R.id.imageView)
     }
 
 

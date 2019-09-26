@@ -6,5 +6,6 @@ import retrofit2.http.Path
 
 interface GitHubService{
     @GET("users/{user}/")
-    suspend fun fetchRepoList(@Path("user") user: String):Repository
+    suspend fun fetchRepoList(@Path("user") user: String): LiveData<List<Repository>>
+
 }

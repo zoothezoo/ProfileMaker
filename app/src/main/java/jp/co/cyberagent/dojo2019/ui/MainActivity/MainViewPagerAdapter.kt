@@ -1,19 +1,18 @@
-package jp.co.cyberagent.dojo2019.MainActivity
+package jp.co.cyberagent.dojo2019.ui.MainActivity
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.viewpager.widget.PagerAdapter
-import jp.co.cyberagent.dojo2019.MainActivity.friendsList.FriendsFragment
-import jp.co.cyberagent.dojo2019.MainActivity.inputAccount.inputAccountFragment
+import jp.co.cyberagent.dojo2019.ui.MainActivity.friendsList.FriendsFragment
+import jp.co.cyberagent.dojo2019.ui.MainActivity.inputAccount.inputAccountFragment
 
 class MainViewPagerAdapter(fm: FragmentManager): FragmentStatePagerAdapter(fm){
 
 
     override fun getItem(position: Int): Fragment {
         val friendsfragment = FriendsFragment()
-        val inputfragment =
-            inputAccountFragment()
+        val inputfragment = inputAccountFragment()
 
         return when (position) {
             0 -> inputfragment

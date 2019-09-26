@@ -1,4 +1,4 @@
-package jp.co.cyberagent.dojo2019.MainActivity.inputAccount
+package jp.co.cyberagent.dojo2019.ui.MainActivity.inputAccount
 
 import android.app.AlertDialog
 import android.content.Context

@@ -1,4 +1,4 @@
-package jp.co.cyberagent.dojo2019.MainActivity
+package jp.co.cyberagent.dojo2019.ui.MainActivity
 
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity

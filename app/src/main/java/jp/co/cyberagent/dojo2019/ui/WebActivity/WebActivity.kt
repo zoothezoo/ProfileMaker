@@ -1,4 +1,4 @@
-package jp.co.cyberagent.dojo2019.WebActivity
+package jp.co.cyberagent.dojo2019.ui.WebActivity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

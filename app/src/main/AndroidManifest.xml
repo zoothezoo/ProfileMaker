@@ -15,10 +15,10 @@
             android:theme="@style/DarkThemeApp">
             <!--android:theme="@style/Theme.AppCompat.Light.NoActionBar"-->
 
-        <activity android:name=".WebActivity.WebActivity"
+        <activity android:name=".ui.WebActivity.WebActivity"
                   android:configChanges="uiMode">
         </activity>
-        <activity android:name=".MainActivity.MainActivity">
+        <activity android:name="jp.co.cyberagent.dojo2019.ui.MainActivity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
